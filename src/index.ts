@@ -32,6 +32,10 @@ const app = express();
 
 app.use(express.json())
 
+app.get("/", (req, res) => {
+    return res.send("OK");
+});
+
 app.post('/webhook', async (req, res) => {
     if(!req.headers["x-centox-webhook-secret"]) return res.status(401).send("Unauthorized - no secret provided");
     if(req.headers["x-centox-webhook-secret"] !== process.env.WEBHOOK_SECRET) return res.status(401).send("Unauthorized - invalid secret");
