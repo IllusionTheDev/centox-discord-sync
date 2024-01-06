@@ -2,7 +2,7 @@
   "name": "@centox/discord-sync",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "type": "commonjs",
   "scripts": {
     "start-node": "node --loader ts-node/esm src/index.ts",

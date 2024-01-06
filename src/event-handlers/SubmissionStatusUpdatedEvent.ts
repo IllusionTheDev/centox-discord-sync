@@ -1,4 +1,4 @@
-import { FORM_TO_ROLE } from "@/config";
+import { FORM_TO_ROLE } from "../config";
 import { SubmissionStatusUpdatedEvent } from "../types/SubmissionStatusUpdatedEvent";
 import { Client, Guild } from "discord.js";
  
