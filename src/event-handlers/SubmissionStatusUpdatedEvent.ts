@@ -7,7 +7,7 @@ export default async function handle(client: Client, guild: Guild, event: Submis
     const user = await guild.members.fetch(event.submission.user.loginProvidersIds.DISCORD);
     if(!user) return console.log("\x1b[32mdiscord.js\x1b[0m  User not found");
     
-    let roleId = FORM_TO_ROLE[event.submission.form.id];
+    let roleId = FORM_TO_ROLE[event.submission.form.slug];
     if(!roleId) return console.log("\x1b[32mdiscord.js\x1b[0m  No role not found for form");
     let role = await guild.roles.fetch(roleId);
     if(!role) return console.log("\x1b[32mdiscord.js\x1b[0m  Role not found with id " + roleId);
