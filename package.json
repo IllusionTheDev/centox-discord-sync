@@ -8,8 +8,7 @@
     "start-node": "node --loader ts-node/esm src/index.ts",
     "start": "node dist/index.js",
     "dev": "nodemon src/index.ts",
-    "build": "tsc",
-    "postinstall": "yarn build"
+    "postinstall": "yarn build && yarn start"
   },
   "author": "",
   "license": "ISC",
